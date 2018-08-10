@@ -1,0 +1,90 @@
+MovesEvent => X: 574,Y: 587,time=1533910275.1844077
+MovesEvent => X: 540,Y: 585,time=1533910275.1924086
+MovesEvent => X: 473,Y: 585,time=1533910275.2004094
+MovesEvent => X: 401,Y: 585,time=1533910275.20841
+MovesEvent => X: 301,Y: 585,time=1533910275.2164109
+MovesEvent => X: 201,Y: 585,time=1533910275.2244117
+MovesEvent => X: 118,Y: 585,time=1533910275.2324123
+MovesEvent => X: 34,Y: 585,time=1533910275.2404132
+MovesEvent => X: -44,Y: 585,time=1533910275.2484143
+MovesEvent => X: -110,Y: 585,time=1533910275.2614155
+MovesEvent => X: -166,Y: 585,time=1533910275.2644157
+MovesEvent => X: -217,Y: 585,time=1533910275.2724166
+MovesEvent => X: -246,Y: 585,time=1533910275.2804172
+MovesEvent => X: -273,Y: 585,time=1533910275.288418
+MovesEvent => X: -298,Y: 585,time=1533910275.296419
+MovesEvent => X: -312,Y: 585,time=1533910275.3044195
+MovesEvent => X: -325,Y: 585,time=1533910275.3124206
+MovesEvent => X: -331,Y: 585,time=1533910275.3204215
+MovesEvent => X: -334,Y: 585,time=1533910275.328422
+MovesEvent => X: -335,Y: 585,time=1533910275.336423
+MovesEvent => X: -339,Y: 585,time=1533910275.4404335
+MovesEvent => X: -342,Y: 585,time=1533910275.448434
+MovesEvent => X: -343,Y: 585,time=1533910275.456435
+MovesEvent => X: -344,Y: 585,time=1533910275.4644358
+MovesEvent => X: -345,Y: 586,time=1533910275.5204413
+MovesEvent => X: -345,Y: 593,time=1533910275.5284421
+MovesEvent => X: -345,Y: 604,time=1533910275.536443
+MovesEvent => X: -345,Y: 607,time=1533910275.5444436
+WheelEvent => delta: -1.0,time=1533910275.5464437
+WheelEvent => delta: -1.0,time=1533910275.5684462
+WheelEvent => delta: -1.0,time=1533910275.5844479
+WheelEvent => delta: -1.0,time=1533910275.6004493
+WheelEvent => delta: 1.0,time=1533910276.0724964
+WheelEvent => delta: 1.0,time=1533910276.1044998
+WheelEvent => delta: 1.0,time=1533910276.3765268
+WheelEvent => delta: 1.0,time=1533910276.4005294
+WheelEvent => delta: 1.0,time=1533910276.6725566
+WheelEvent => delta: 1.0,time=1533910276.728562
+MovesEvent => X: -343,Y: 614,time=1533910277.2006092
+MovesEvent => X: -318,Y: 625,time=1533910277.20861
+MovesEvent => X: -285,Y: 635,time=1533910277.216611
+MovesEvent => X: -247,Y: 643,time=1533910277.2246115
+MovesEvent => X: -211,Y: 648,time=1533910277.2326126
+MovesEvent => X: -162,Y: 658,time=1533910277.2406135
+MovesEvent => X: -108,Y: 667,time=1533910277.248614
+MovesEvent => X: -45,Y: 674,time=1533910277.256615
+MovesEvent => X: 19,Y: 684,time=1533910277.2646158
+MovesEvent => X: 95,Y: 695,time=1533910277.2786171
+MovesEvent => X: 170,Y: 705,time=1533910277.2806172
+MovesEvent => X: 234,Y: 716,time=1533910277.288618
+MovesEvent => X: 292,Y: 722,time=1533910277.296619
+MovesEvent => X: 344,Y: 725,time=1533910277.3046198
+MovesEvent => X: 374,Y: 725,time=1533910277.3126206
+MovesEvent => X: 407,Y: 725,time=1533910277.3206213
+MovesEvent => X: 434,Y: 725,time=1533910277.328622
+MovesEvent => X: 458,Y: 725,time=1533910277.336623
+MovesEvent => X: 485,Y: 725,time=1533910277.3446236
+MovesEvent => X: 510,Y: 725,time=1533910277.3526244
+MovesEvent => X: 532,Y: 725,time=1533910277.3606255
+MovesEvent => X: 554,Y: 724,time=1533910277.368626
+MovesEvent => X: 571,Y: 717,time=1533910277.376627
+MovesEvent => X: 588,Y: 713,time=1533910277.3846278
+MovesEvent => X: 603,Y: 705,time=1533910277.3926284
+MovesEvent => X: 618,Y: 694,time=1533910277.4006293
+MovesEvent => X: 628,Y: 684,time=1533910277.4086301
+MovesEvent => X: 640,Y: 673,time=1533910277.4166307
+MovesEvent => X: 648,Y: 661,time=1533910277.4246318
+MovesEvent => X: 654,Y: 651,time=1533910277.4326327
+MovesEvent => X: 660,Y: 639,time=1533910277.4406333
+MovesEvent => X: 662,Y: 630,time=1533910277.4486341
+MovesEvent => X: 662,Y: 622,time=1533910277.456635
+MovesEvent => X: 662,Y: 614,time=1533910277.4646356
+MovesEvent => X: 659,Y: 602,time=1533910277.4726365
+MovesEvent => X: 649,Y: 589,time=1533910277.480637
+MovesEvent => X: 638,Y: 577,time=1533910277.4886382
+MovesEvent => X: 628,Y: 569,time=1533910277.496639
+MovesEvent => X: 617,Y: 565,time=1533910277.5046396
+MovesEvent => X: 608,Y: 563,time=1533910277.5126405
+MovesEvent => X: 599,Y: 563,time=1533910277.5206413
+MovesEvent => X: 591,Y: 563,time=1533910277.528642
+MovesEvent => X: 586,Y: 563,time=1533910277.5366428
+MovesEvent => X: 582,Y: 563,time=1533910277.5446436
+MovesEvent => X: 579,Y: 564,time=1533910277.5526445
+MovesEvent => X: 575,Y: 565,time=1533910277.5606453
+MovesEvent => X: 574,Y: 565,time=1533910277.5766468
+MovesEvent => X: 572,Y: 565,time=1533910277.5846477
+WheelEvent => delta: -1.0,time=1533910277.6326525
+WheelEvent => delta: 1.0,time=1533910278.0806973
+ClickEvent => code: 513,data: 0,time=1533910278.536743
+ClickEvent => code: 514,data: 0,time=1533910278.6327524
