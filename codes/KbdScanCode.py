@@ -1,24 +1,24 @@
-# Filename : KbdScanCode.py 
+# Filename : KbdScanCode.py
 # Desc. : Theses are all the scancodes for a keyboard and their function that I could find.
 #
 #-------------------------------   REFERENCE ---------------------------------------#
 #
 # msdn.microsoft.com/en-us/library/dd375731
 # https://docs.microsoft.com/fr-fr/windows/desktop/inputdev/virtual-key-codes
-# ----------------------------------------------------------------------------------# 
+# ----------------------------------------------------------------------------------#
 #
 # KEYBDINPUT structure
 # https://msdn.microsoft.com/en-us/library/windows/desktop/ms646271(v=vs.85).aspx
-# ----------------------------------------------------------------------------------# 
+# ----------------------------------------------------------------------------------#
 #
 # winuser.h
 # C:\Program Files (x86)\Microsoft SDKs\Windows\vX.Xx\Include\WinUser.h
-# ----------------------------------------------------------------------------------# 
+# ----------------------------------------------------------------------------------#
 #
 # KeyboardEvent.Keycode
 # https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode
 # ----------------------------------------------------------------------------------#
-# Note : 
+# Note :
 # _WIN32_WINNT Values :
 # Windows 8.1	                                            _WIN32_WINNT_WINBLUE (0x0602)
 # Windows 8	                                                _WIN32_WINNT_WIN8 (0x0602)
@@ -38,15 +38,15 @@ KEYEVENTF_UNICODE     = 0x0004
 KEYEVENTF_SCANCODE    = 0x0008
 #-----------------------------------------------------------------------------------#
 
-WM_KEYDOWN = 0x0100 
-WM_KEYUP = 0x0101 
-WM_SYSKEYDOWN = 0x104 # Used for ALT key 
-WM_SYSKEYUP = 0x105 
+WM_KEYDOWN = 0x0100
+WM_KEYUP = 0x0101
+WM_SYSKEYDOWN = 0x104 # Used for ALT key
+WM_SYSKEYUP = 0x105
 
 # Mouse buttons (Not sure what they are used for since this is for keyboard)
 VK_LBUTTON  = 0x01 # Left mouse button
 VK_RBUTTON  = 0x02 # Right mouse button
-VK_CANCEL   = 0x03 # Control-break processing (Ctrl-c most of the time) 
+VK_CANCEL   = 0x03 # Control-break processing (Ctrl-c most of the time)
 VK_MBUTTON  = 0x04 # Middle mouse button (three-button mouse) NOT contiguous with L & RBUTTON
 # if _WIN32_WINNT >= 0x0500
 VK_XBUTTON1 = 0x05 # X1 mouse button. NOT contiguous with L & RBUTTON
@@ -133,7 +133,7 @@ VK_KEY_Y = 0x59 # Y key
 VK_KEY_Z = 0x5A # Z key
 #-----------------------------------------------------------------------------------#
 
-VK_LWIN      = 0x5B # Left Windows key (Natural keyboard) 
+VK_LWIN      = 0x5B # Left Windows key (Natural keyboard)
 VK_RWIN      = 0x5C # Right Windows key (Natural keyboard)
 VK_APPS      = 0x5D # Applications key (Natural keyboard)
 VK_SLEEP     = 0x5F # Computer Sleep key
@@ -209,7 +209,7 @@ VK_BROWSER_BACK        = 0xA6 # Browser Back key
 VK_BROWSER_FORWARD     = 0xA7 # Browser Forward key
 VK_BROWSER_REFRESH     = 0xA8 # Browser Refresh key
 VK_BROWSER_STOP        = 0xA9 # Browser Stop key
-VK_BROWSER_SEARCH      = 0xAA # Browser Search key 
+VK_BROWSER_SEARCH      = 0xAA # Browser Search key
 VK_BROWSER_FAVORITES   = 0xAB # Browser Favorites key
 VK_BROWSER_HOME        = 0xAC # Browser Start and Home key
 VK_VOLUME_MUTE         = 0xAD # Volume Mute key
@@ -301,21 +301,21 @@ lt_Numpad = [
 
 # https://github.com/boppreh/keyboard/blob/master/keyboard/_winkeyboard.py
 lt_OtherNumpad = [
-    (126, 194, 0), 
-    (126, 194, 0), 
-    (28, 13, 1), 
+    (126, 194, 0),
+    (126, 194, 0),
     (28, 13, 1),
-    (69, 144, 1), 
-    (69, 144, 1), 
-    (71, 36, 0), 
-    (72, 38, 0), 
-    (73, 33, 0), 
-    (75, 37, 0), 
-    (76, 12, 0), 
-    (77, 39, 0), 
-    (79, 35, 0), 
-    (80, 40, 0), 
-    (81, 34, 0), 
+    (28, 13, 1),
+    (69, 144, 1),
+    (69, 144, 1),
+    (71, 36, 0),
+    (72, 38, 0),
+    (73, 33, 0),
+    (75, 37, 0),
+    (76, 12, 0),
+    (77, 39, 0),
+    (79, 35, 0),
+    (80, 40, 0),
+    (81, 34, 0),
     (82, 45, 0),
     (83, 46, 0)
 ]
@@ -337,4 +337,4 @@ _ = [0xD8, 0xD9, 0xDA] # Unassigned
 _ = 0xE0 # Reserved
 _ = 0xE8 # Unassigned
 _ = [0xE9, 0xEA, 0xEB, 0xEC, 0xED, 0xEE, 0xEF, 0xF0, 0xF1, 0xF2, 0xF3, 0xF4] # OEM specific
-VK_NONAME = 0xFC # Reserved 
+VK_NONAME = 0xFC # Reserved

@@ -1,4 +1,4 @@
-# Filename : Winuser.py 
+# Filename : Winuser.py
 # Desc. : Make Winuser.h to python
 #
 # ----------------------------------------------------------------------------------#
@@ -53,7 +53,7 @@ class MOUSEINPUT(ctypes.Structure):
                 ("dwExtraInfo", wintypes.ULONG_PTR))
 
 # ----------------------------------------------------------------------------------------------------------------------------
-# https://msdn.microsoft.com/en-us/library/windows/desktop/ms646271(v=vs.85).aspx                
+# https://msdn.microsoft.com/en-us/library/windows/desktop/ms646271(v=vs.85).aspx
 class KEYBDINPUT(ctypes.Structure):
     _fields_ = (("wVk",         wintypes.WORD),
                 ("wScan",       wintypes.WORD),
@@ -106,9 +106,9 @@ SendInputFunc.errcheck = _check_count
 SendInputFunc.argtypes = (wintypes.UINT, # nInputs
                           LPINPUT,       # pInputs
                           ctypes.c_int)  # cbSize
-                          
 
-# https://msdn.microsoft.com/en-us/library/windows/desktop/ms646332(v=vs.85).aspx                         
+
+# https://msdn.microsoft.com/en-us/library/windows/desktop/ms646332(v=vs.85).aspx
 user32.VkKeyScanExW.restype = wintypes.SHORT
 def VkKeyScanEx(ch, hkl):
 	res = user32.VkKeyScanExW(wintypes.WCHAR(ch), hkl)

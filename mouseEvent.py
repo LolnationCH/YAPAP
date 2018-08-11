@@ -1,11 +1,11 @@
-# Filename : mouseEvent.py 
+# Filename : mouseEvent.py
 # Desc. : Containers for the different event available to the mouse
 #
-# ----------------------------------------------------------------------------------# 
+# ----------------------------------------------------------------------------------#
 
 from codes.MouseScanCode import *
 
-def parseEvent(stre, last_time):    
+def parseEvent(stre, last_time):
     try:
         classT = stre[:10]
         rest = stre[14:].split(',')
@@ -28,25 +28,25 @@ def parseEvent(stre, last_time):
     except Exception as e:
         print(e)
         return None, last_time
-        
-        
+
+
 # The name for the __str__ do not match the class name simply for length convention
 # I could make it more complicated, but for now that will do
-        
+
 class MoveEvent():
     def __init__(self, x, y, time):
         self.X = x
         self.Y = y
         self.time = time
-    
+
     def __str__(self):
         return "MovesEvent => X: {},Y: {},time={}".format(self.X, self.Y, self.time)
-        
+
 class WheelEvent():
     def __init__(self, delta, time):
         self.delta = delta
         self.time = time
-    
+
     def __str__(self):
         return "WheelEvent => delta: {},time={}".format(self.delta, self.time)
 
@@ -56,6 +56,6 @@ class ButtonEvent():
         self.code = code
         self.data = data
         self.time = time
-    
+
     def __str__(self):
         return "ClickEvent => code: {},data: {},time={}".format(self.code, self.data, self.time)

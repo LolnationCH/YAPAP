@@ -1,7 +1,7 @@
-# Filename : MouseScanCode.py 
+# Filename : MouseScanCode.py
 # Desc. : Scan codes for mouse
 #
-# ----------------------------------------------------------------------------------# 
+# ----------------------------------------------------------------------------------#
 
 # dwFlags for MOUSEINPUT
 # https://msdn.microsoft.com/en-us/library/windows/desktop/ms646273(v=vs.85).aspx
@@ -65,7 +65,7 @@ DOUBLE = 'DOUBLE'
 WHEEL = 'WHEEL'
 
 # Dictionary for the dwFlags MOUSEINPUT
-inputMouseButton = { 
+inputMouseButton = {
    DOWN : {
         LEFT   : MOUSEEVENTF_LEFTDOWN,
         RIGHT  : MOUSEEVENTF_RIGHTDOWN,

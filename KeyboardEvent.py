@@ -1,6 +1,6 @@
 from time import time as GetTime
 
-def parseEvent(stre, last_time):    
+def parseEvent(stre, last_time):
     try:
         rest = stre[17:].split(',')
         eventType = rest[0][10:]

@@ -3,8 +3,8 @@ import ctypes
 import atexit
 
 from structs   import POINT, INPUT, MOUSEINPUT
-from functions import (user32, LowLevelMouseProc, GetCursorPos, SetCursorPosFunc, SendInputFunc, 
-                       SetWindowsHookEx, CallNextHookEx, UnhookWindowsHookEx, GetMessage, TranslateMessage, 
+from functions import (user32, LowLevelMouseProc, GetCursorPos, SetCursorPosFunc, SendInputFunc,
+                       SetWindowsHookEx, CallNextHookEx, UnhookWindowsHookEx, GetMessage, TranslateMessage,
                        DispatchMessage, LPMSG)
 from codes.MouseScanCode import *
 from codes.InputConst import *
@@ -28,15 +28,15 @@ class Mouse():
     def __MouseButtonDown(self, side):
         x = INPUT(type=INPUT_MOUSE, mi=MOUSEINPUT(dwFlags=inputMouseButton[DOWN][side]))
         sendLamb(x)
-    
+
     def __MouseButtonUp(self, side):
         x = INPUT(type=INPUT_MOUSE, mi=MOUSEINPUT(dwFlags=inputMouseButton[UP][side]))
         sendLamb(x)
-    
+
     def __sendCode(self, code):
         x = INPUT(type=INPUT_MOUSE, mi=MOUSEINPUT(dwFlags=code))
         sendLamb(x)
-    
+
     # Seems to not work as intended
     def MoveRelative(self, x, y):
         x = INPUT(type=INPUT_MOUSE, mi=MOUSEINPUT(dx=int(x), dy=int(y), dwFlags=MOUSEEVENTF_MOVE))
@@ -83,7 +83,7 @@ class Mouse():
             TranslateMessage(msg)
             DispatchMessage(msg)
 
-            
+
     def __GetEventsFromFile(self, filename):
         with open(filename) as f:
             data = f.read().split('\n')
@@ -99,7 +99,7 @@ class Mouse():
             else:
                 print("Line not formated correctly : {}")
         return lt
-                
+
     def DoInputsRespectDelay(self, filename):
         lt = self.__GetEventsFromFile(filename)
         for event in lt:
@@ -110,7 +110,7 @@ class Mouse():
             elif isinstance(event, ButtonEvent):
                 self.__sendCode(event.code)
             time.sleep(event.time)
-    
+
     def FastInputs(self, filename):
         lt = self.__GetEventsFromFile(filename)
         for event in lt:
@@ -120,7 +120,7 @@ class Mouse():
                 self.MoveWheel(event.delta)
             elif isinstance(event, ButtonEvent):
                 self.__sendCode(event.code)
-            
+
 
 if __name__ == "__main__":
     m = Mouse()

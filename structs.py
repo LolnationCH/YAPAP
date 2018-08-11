@@ -1,4 +1,4 @@
-# Filename : structs.py 
+# Filename : structs.py
 # Desc. : Structs definitions
 #
 # ----------------------------------------------------------------------------------#
@@ -22,7 +22,7 @@ wintypes.ULONG_PTR = wintypes.WPARAM
 class POINT(ctypes.Structure):
     _fields_ = [("X", ctypes.c_long),
                 ("Y", ctypes.c_long)]
-                
+
     def __sub__ (self, other):
         return POINT(other.X - self.X, other.Y - self.Y)
     def __str__(self):
@@ -59,7 +59,7 @@ class MOUSEINPUT(ctypes.Structure):
                 ("dwExtraInfo", wintypes.ULONG_PTR))
 
 # ----------------------------------------------------------------------------------------------------------------------------
-# https://msdn.microsoft.com/en-us/library/windows/desktop/ms646271(v=vs.85).aspx                
+# https://msdn.microsoft.com/en-us/library/windows/desktop/ms646271(v=vs.85).aspx
 class KEYBDINPUT(ctypes.Structure):
     _fields_ = (("wVk",         wintypes.WORD),
                 ("wScan",       wintypes.WORD),

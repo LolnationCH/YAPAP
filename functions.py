@@ -1,4 +1,4 @@
-# Filename : functions.py 
+# Filename : functions.py
 # Desc. : Contains all the function from the libs
 #
 # ----------------------------------------------------------------------------------#
@@ -29,7 +29,7 @@ elif ctypes.sizeof(ctypes.c_longlong) == ctypes.sizeof(ctypes.c_void_p):
 
 
 # ----------------------------------------------------------------------------------------------------------------------------
-# For Windows focus    
+# For Windows focus
 # ----------------------------------------------------------------------------------------------------------------------------
 WNDENUMPROC = ctypes.WINFUNCTYPE(wintypes.BOOL, wintypes.HWND, wintypes.LPARAM)
 
@@ -78,20 +78,20 @@ GetKeyState = user32.GetKeyState
 
 # ----------------------------------------------------------------------------------------------------------------------------
 # https://msdn.microsoft.com/en-us/library/windows/desktop/ms646299(v=vs.85).aspx
-GetKeyboardState = user32.GetKeyboardState 
-GetKeyboardState.argtypes = [KeyboadStateType] 
-GetKeyboardState.restype = wintypes.BOOL 
+GetKeyboardState = user32.GetKeyboardState
+GetKeyboardState.argtypes = [KeyboadStateType]
+GetKeyboardState.restype = wintypes.BOOL
 
 # ----------------------------------------------------------------------------------------------------------------------------
 # https://msdn.microsoft.com/en-us/library/windows/desktop/ms646320(v=vs.85).aspx
 ToUnicode = user32.ToUnicode
-ToUnicode.argtypes = [ctypes.c_uint, ctypes.c_uint, KeyboadStateType, wintypes.LPWSTR, ctypes.c_int, ctypes.c_uint] 
-ToUnicode.restype = ctypes.c_int 
+ToUnicode.argtypes = [ctypes.c_uint, ctypes.c_uint, KeyboadStateType, wintypes.LPWSTR, ctypes.c_int, ctypes.c_uint]
+ToUnicode.restype = ctypes.c_int
 
 # ----------------------------------------------------------------------------------------------------------------------------
 # https://msdn.microsoft.com/en-us/library/windows/desktop/ms646300(v=vs.85).aspx
 def GetKeyNameText(vk, scanCode, isExtented, modifiersState):
-    KeyboardState[0x10] = 0x80 * modifiersState['SHIFT']  
+    KeyboardState[0x10] = 0x80 * modifiersState['SHIFT']
     KeyboardState[0x11] = 0x80 * modifiersState['ALTGR']
     KeyboardState[0x12] = 0x80 * modifiersState['ALTGR']
     KeyboardState[0x14] = 0x01 * modifiersState['NUMLOCK']
@@ -101,12 +101,12 @@ def GetKeyNameText(vk, scanCode, isExtented, modifiersState):
     ret = ToUnicode(vk, scanCode, KeyboardState, unicodeBuffer, len(unicodeBuffer), 0)
     if ret and unicodeBuffer.value:
        yield unicodeBuffer.value
-       # unicode_ret == -1 -> is dead key 
-       # ToUnicode has the side effect of setting global flags for dead keys. 
-       # Therefore we need to call it twice to clear those flags. 
-       # If your 6 and 7 keys are named "^6" and "^7", this is the reason. 
+       # unicode_ret == -1 -> is dead key
+       # ToUnicode has the side effect of setting global flags for dead keys.
+       # Therefore we need to call it twice to clear those flags.
+       # If your 6 and 7 keys are named "^6" and "^7", this is the reason.
        ToUnicode(vk, scanCode, KeyboardState, unicodeBuffer, len(unicodeBuffer), 0)
-    
+
     ret = user32.GetKeyNameTextW(scanCode << 16 | isExtented << 24, nameBuffer, 1024)
     if ret and nameBuffer.value:
         yield nameBuffer.value
@@ -134,16 +134,16 @@ SetCursorPosFunc = user32.SetCursorPos
 SendInputFunc = user32.SendInput
 SendInputFunc.errcheck = _check_count
 SendInputFunc.argtypes = (wintypes.UINT, LPINPUT, ctypes.c_int)
-                          
+
 # ----------------------------------------------------------------------------------------------------------------------------
-# https://msdn.microsoft.com/en-us/library/windows/desktop/ms646332(v=vs.85).aspx                         
+# https://msdn.microsoft.com/en-us/library/windows/desktop/ms646332(v=vs.85).aspx
 user32.VkKeyScanExW.restype = wintypes.SHORT
 def VkKeyScanEx(ch, hkl):
 	res = user32.VkKeyScanExW(wintypes.WCHAR(ch), hkl)
 	if res == -1:
 		return -1, -1
 	return res >> 8, res & 0xFF
-    
+
 # Not scan code, this is for VkKeyScanExW
 SHIFT_KEY = 1
 CTRL_KEY = 2
@@ -151,7 +151,7 @@ ALT_KEY = 4
 HANKAKU_KEY = 8
 RESERVED_KEY = [16,32] # Reserved (defined by the keyboard layout driver).
 # ----------------------------------------------------------------------------------------------------------------------------
-    
+
 
 # ----------------------------------------------------------------------------------------------------------------------------
 # Hook functions
