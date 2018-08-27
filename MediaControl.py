@@ -1,36 +1,33 @@
-import os
-import ctypes
+'''
+Example of program that can be made with this package
+Allows user for global shortcut for media in case the keyboard he use does not comes with them
+'''
+# pylint: disable=line-too-long
+# pylint: disable=undefined-variable
+# pylint: disable=invalid-name
+from YAPAP import Window, Keyboard, Mouse, import_from, import_from_lt
 
-from Keyboard import *
-from Mouse import *
-import windowManipulation
-from functions import BlockInput
+KEY_IS_PRESSED_WITH_ALT = lambda event: event.eventType == 'DOWN' and event.modifiers["ALT"]
 
-clear = lambda: os.system('cls')
-
-def keyIsPressedWithAlt(event):
-    return event.eventType == KEY_DOWN and event.modifiers["ALT"]
-
-m = Mouse()
-
-def keyToPressFunc(event):
-    if keyIsPressedWithAlt(event):
-        if event.vk in keyToPress:
-            lst_time = event.time
-            k.PressNReleaseKey(keyToPress[event.vk])
-        elif event.vk == VK_KEY_S:
-            if windowManipulation.list_windows("YouTube Music"):
-                m.MoveTo(-752, 1023)
-                m.Click("Left")
+def key_to_press_func(event):
+    '''
+    Function use in the callback of the listen function for the keyboard
+    '''
+    if KEY_IS_PRESSED_WITH_ALT(event):
+        if event.vk in KEY_TO_PRESS:
+            Keyboard.press_n_release_key(KEY_TO_PRESS[event.vk])
+        elif event.vk == Keyboard.VK_KEY_S:
+            if Window.findHandlesWindowWithPattern("YouTube Music", Window.SetForegroundWindow):
+                Mouse.MoveTo(-752, 1023)
+                Mouse.Click("Left")
     return True
 
-keyToPress = {
-                VK_KEY_U : VK_VOLUME_UP,
-                VK_KEY_D : VK_VOLUME_DOWN,
-                VK_KEY_M : VK_VOLUME_MUTE
-             }
+KEY_TO_PRESS = {
+    Keyboard.VK_KEY_U : Keyboard.VK_VOLUME_UP,
+    Keyboard.VK_KEY_D : Keyboard.VK_VOLUME_DOWN,
+    Keyboard.VK_KEY_M : Keyboard.VK_VOLUME_MUTE
+}
 
 
 if __name__ == "__main__":
-    k = Keyboard()
-    k.listen(keyToPressFunc)
+    Keyboard.listen(key_to_press_func)

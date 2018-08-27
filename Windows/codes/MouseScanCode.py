@@ -1,7 +1,9 @@
-# Filename : MouseScanCode.py
-# Desc. : Scan codes for mouse
-#
-# ----------------------------------------------------------------------------------#
+'''
+Scan codes for mouse
+'''
+
+# pylint: disable=bad-whitespace
+# pylint: disable=line-too-long
 
 # dwFlags for MOUSEINPUT
 # https://msdn.microsoft.com/en-us/library/windows/desktop/ms646273(v=vs.85).aspx
@@ -65,28 +67,28 @@ DOUBLE = 'DOUBLE'
 WHEEL = 'WHEEL'
 
 # Dictionary for the dwFlags MOUSEINPUT
-inputMouseButton = {
-   DOWN : {
+INPUT_MOUSE_BOUTTON = {
+    DOWN : {
         LEFT   : MOUSEEVENTF_LEFTDOWN,
         RIGHT  : MOUSEEVENTF_RIGHTDOWN,
         MIDDLE : MOUSEEVENTF_MIDDLEDOWN,
         X      : MOUSEEVENTF_XDOWN,
         X2     : MOUSEEVENTF_XDOWN
     },
-   UP : {
+    UP : {
         LEFT   : MOUSEEVENTF_LEFTUP,
         RIGHT  : MOUSEEVENTF_RIGHTUP,
         MIDDLE : MOUSEEVENTF_MIDDLEUP,
         X      : MOUSEEVENTF_XUP,
         X2     : MOUSEEVENTF_XUP
     },
-   WHEEL : {
+    WHEEL : {
         VERTICAL   : MOUSEEVENTF_WHEEL,
         HORIZONTAL : MOUSEEVENTF_HWHEEL,
     }
 }
 
-wmCodeButton = {
+WM_CODE_BUTTON = {
     WM_LBUTTONDOWN   : (DOWN, LEFT),
     WM_LBUTTONUP     : (UP, LEFT),
     WM_LBUTTONDBLCLK : (DOUBLE, LEFT),

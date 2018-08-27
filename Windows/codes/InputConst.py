@@ -1,7 +1,9 @@
-# Filename : InputConst.py
-# Desc. : Const. for the inputs in general
-#
-# ----------------------------------------------------------------------------------#
+'''
+Const. for the inputs in general
+'''
+
+# pylint: disable=bad-whitespace
+# pylint: disable=line-too-long
 
 # type for INPUT
 # https://msdn.microsoft.com/en-us/library/windows/desktop/ms646270(v=vs.85).aspx
