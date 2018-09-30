@@ -48,7 +48,7 @@ class MoveEvent():
 class WheelEvent():
     '''Wheel event info container.'''
     def __init__(self, delta, time):
-        '''TODO.'''
+        '''.'''
         self.delta = delta
         self.time = time
 
@@ -59,7 +59,7 @@ class WheelEvent():
 class ButtonEvent():
     '''Button event info container.'''
     def __init__(self, code, data, time):
-        '''TODO.'''
+        '''.'''
         self.event_type, self.button = WM_CODE_BUTTON[code]
         self.code = code
         self.data = data

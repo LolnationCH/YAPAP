@@ -53,7 +53,7 @@ def write_to_file_events(event):
     return True
 
 def _get_events_from_file(filename):
-    '''TODO'''
+    '''Get events from file'''
     with open(filename) as file_handle:
         data = file_handle.read().split('\n')
 
